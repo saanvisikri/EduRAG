@@ -1,0 +1,52 @@
+Chapter 1: Introduction to Computer Networks
+
+A computer network is a collection of interconnected devices that can
+exchange data with one another. Networks are typically classified by their
+geographic scope. A Local Area Network, or LAN, connects devices within a
+single building or campus, such as computers in a college lab. A Wide Area
+Network, or WAN, spans a much larger geographic area, connecting multiple
+LANs across cities or countries, with the internet being the largest
+example of a WAN.
+
+Data travels across a network in small units called packets. Rather than
+sending an entire file as one continuous stream, the sending device breaks
+it into packets, each carrying a small piece of the data along with header
+information such as the source address, destination address, and a
+sequence number so the packets can be reassembled correctly at the other
+end, even if they arrive out of order.
+
+Chapter 2: The OSI and TCP/IP Models
+
+The OSI model describes networking as seven layers, each responsible for a
+specific job: physical, data link, network, transport, session,
+presentation, and application. Data passed down from the application layer
+gets wrapped with additional header information at each layer below it, a
+process called encapsulation, and the reverse process, decapsulation,
+happens at the receiving end as the data moves back up through the layers.
+
+In practice, most real networks use the simpler four-layer TCP/IP model:
+network access, internet, transport, and application. The Internet
+Protocol, or IP, operates at the internet layer and is responsible for
+addressing and routing packets across networks. The Transmission Control
+Protocol, or TCP, operates at the transport layer and guarantees reliable,
+ordered delivery by requiring the receiver to acknowledge each packet, and
+retransmitting any packet that gets lost. The User Datagram Protocol, or
+UDP, is a faster but unreliable alternative at the same layer, used when
+speed matters more than guaranteed delivery, such as in live video calls.
+
+Chapter 3: Routing and Switching
+
+A switch operates within a single network and forwards data based on
+physical hardware addresses called MAC addresses, learning which device is
+connected to which port by observing traffic. A router, by contrast,
+connects multiple different networks together and forwards data based on
+IP addresses, using a routing table to decide the best path for a packet
+to reach its destination network.
+
+Routing protocols determine how routers build and update these tables.
+Distance-vector protocols, such as RIP, have each router share its own
+routing table with its immediate neighbors, gradually building a picture
+of the wider network. Link-state protocols, such as OSPF, instead have
+every router build a complete map of the network's topology by flooding
+information about its direct connections to all other routers, then
+independently calculating the shortest path to every destination.

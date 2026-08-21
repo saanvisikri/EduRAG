@@ -1,0 +1,52 @@
+Chapter 1: Introduction to Database Management Systems
+
+A database management system, or DBMS, is software that allows users to
+define, create, maintain, and query a database, rather than working with
+raw data files directly. Before DBMSs became standard, applications stored
+data in flat files, which led to problems such as data redundancy, where
+the same information was duplicated across multiple files, and data
+inconsistency, where updating one copy of the data left other copies
+outdated. A DBMS centralizes data storage and enforces rules that keep it
+consistent and accurate.
+
+The relational model, introduced by E. F. Codd, organizes data into
+tables, called relations, where each row represents a single record and
+each column represents an attribute of that record. Every table typically
+has a primary key, a column or combination of columns whose value
+uniquely identifies each row, preventing duplicate records from being
+mistaken for one another.
+
+Chapter 2: Normalization
+
+Normalization is the process of organizing tables to reduce redundancy and
+avoid update anomalies, where changing one piece of data unintentionally
+requires changing it in several places or leaves the database in an
+inconsistent state. Normalization proceeds through a series of normal
+forms, each stricter than the last.
+
+First normal form requires that every column hold only a single, atomic
+value, with no repeating groups or lists stored inside one field. Second
+normal form additionally requires that every non-key attribute depend on
+the entire primary key, not just part of it, which only becomes relevant
+when a table has a composite key made of multiple columns. Third normal
+form goes further, requiring that non-key attributes depend only on the
+primary key and not on other non-key attributes, eliminating what is
+called transitive dependency.
+
+Chapter 3: Transactions and ACID Properties
+
+A transaction is a sequence of one or more database operations that are
+treated as a single logical unit of work, such as transferring money
+between two bank accounts, which requires both a withdrawal and a deposit
+to succeed together. Database systems guarantee four properties for
+transactions, commonly remembered by the acronym ACID.
+
+Atomicity means a transaction either completes entirely or has no effect
+at all, so a failure partway through leaves no partial changes behind.
+Consistency means a transaction moves the database from one valid state to
+another, without violating any defined rules or constraints. Isolation
+means concurrently running transactions do not interfere with each other,
+even though they may be executing at the same time. Durability means that
+once a transaction has been committed, its changes survive even a
+subsequent system crash, typically because they have been written to
+persistent storage.
