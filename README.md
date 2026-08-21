@@ -37,7 +37,7 @@ The backend serves the frontend directly too, so it's one process.
 
 ```bash
 pip install -r requirements.txt
-uvicorn main:app --reload
+python -m uvicorn main:app --reload
 ```
 
 Then just open **http://localhost:8000** — drag in a file (or hit "Try the sample textbook" if you don't want to upload your own right away), and start asking questions from there.
