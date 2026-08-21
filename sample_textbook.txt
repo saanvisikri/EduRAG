@@ -1,0 +1,56 @@
+Chapter 1: Introduction to Machine Learning
+
+Machine learning is a branch of artificial intelligence that allows computer
+systems to improve their performance on a task by learning from data, rather
+than being explicitly programmed with fixed rules. Instead of a human writing
+every decision rule by hand, the system is shown many examples and learns a
+pattern from them on its own.
+
+There are three broad categories of machine learning. In supervised learning,
+the model is trained on labeled data, meaning every example comes with the
+correct answer attached, and the model learns to map inputs to outputs. In
+unsupervised learning, the data has no labels, and the model instead looks
+for structure or grouping in the data on its own, such as clustering similar
+customers together. In reinforcement learning, an agent learns by interacting
+with an environment, receiving rewards or penalties for its actions, and
+gradually improving its strategy over time.
+
+Chapter 2: The Bias-Variance Tradeoff
+
+A central challenge in machine learning is finding a model that generalizes
+well to new, unseen data rather than just memorizing the training data. Bias
+refers to error introduced by overly simplistic assumptions in the model,
+which can cause it to miss important patterns, a problem known as underfitting.
+Variance refers to error introduced by a model that is too sensitive to small
+fluctuations in the training data, which can cause it to fit noise instead of
+the true underlying pattern, a problem known as overfitting.
+
+The goal of model selection is to find a sweet spot between bias and variance.
+A model with high bias and low variance is simple and stable but inaccurate.
+A model with low bias and high variance is flexible and accurate on training
+data but unreliable on new data. Techniques such as cross-validation, and
+regularization methods like L1 and L2 penalties, help strike this balance.
+
+Chapter 3: Neural Networks and Deep Learning
+
+An artificial neural network is loosely inspired by the structure of the
+human brain. It consists of layers of small computational units called
+neurons, connected to one another by weighted connections. Data enters
+through an input layer, passes through one or more hidden layers where it is
+transformed, and produces a result at the output layer. This process of
+passing data forward through the network is called forward propagation.
+
+During training, the network compares its prediction to the correct answer
+using a loss function, which measures how wrong the prediction was. It then
+uses an algorithm called backpropagation, combined with gradient descent, to
+adjust the weights of every connection slightly in the direction that reduces
+the error. Repeating this process over many examples and many passes, called
+epochs, gradually improves the network's accuracy.
+
+Convolutional neural networks, or CNNs, are a specialized type of neural
+network designed for grid-like data such as images. They use filters that
+slide across the input to detect local patterns like edges and textures,
+making them far more efficient than a standard fully-connected network for
+visual tasks. Recurrent neural networks, or RNNs, are instead designed for
+sequential data such as text or time series, since they maintain a form of
+memory of previous inputs as they process a sequence step by step.
